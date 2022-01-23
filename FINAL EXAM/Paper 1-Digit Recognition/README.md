@@ -9,7 +9,7 @@ In paper, we propose simple models classifying MNIST called M3, M5, M7 following
 ### Train
 
 ```bash
-python3 train.py --seed=0 --trial=10 --kernel_size=5 --gpu=0 --logdir=modelM5
+python3 train.py --seed=0 --trial=3 --kernel_size=5 --gpu=0 --logdir=modelM5
 ```
 
 Parameters:
@@ -18,7 +18,7 @@ seed : random seed number
 
 trial : the number of trial. When previous trial is end, add present trial number to seed number.
 
-Ex) seed=0 trial=10 ⇒ execute seed 0~9
+Ex) seed=0 trial=3 ⇒ execute seed 0~2
 
 kernel_size : kernel size of model. You can select the model following this parameter.
 
@@ -29,7 +29,7 @@ logdir : save directory address name. It makes a sub-directory using that name a
 ### Test
 
 ```bash
-python3 test.py  --seed=0 --trial=10 --kernel_size=5 --logdir=modelM5
+python3 test.py  --seed=0 --trial=3 --kernel_size=5 --logdir=modelM5
 ```
 
 test.py loads model saving files and make wrong image number list for each seed.
